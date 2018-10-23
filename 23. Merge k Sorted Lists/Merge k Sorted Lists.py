@@ -43,14 +43,14 @@ C1 = ListNode(2)
 C2 = ListNode(6)
 C1.next = C2
 
-lists = [None,ListNode(1)]
+lists = [L1,B1,C1]
 #value = [l.val for l in lists]
 #k = value.index(min(value))
 #print(lists[k].val)
 #lists[k] = lists[k].next
 #print(lists[k].val)
 L = mergeKLists(lists)
-for i in range(1):
+for i in range(8):
     print(L.val,L.next)
     L = L.next
 
