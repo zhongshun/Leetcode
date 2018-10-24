@@ -11,11 +11,10 @@ def groupAnagrams(strs):
         else:
             dic[a] =dic[a] + [s]
     res = []
+    print(dic)
     for s in dic:
-        res = res + [dic[s]]
+       res = res + [dic[s]]
     return res
-
-
 
 
 
@@ -23,4 +22,5 @@ def groupAnagrams(strs):
 
 
 Input = ["eat", "tea", "tan", "ate", "nat", "bat"]
-groupAnagrams(Input)
+res = groupAnagrams(Input)
+print(res)
