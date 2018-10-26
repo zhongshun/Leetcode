@@ -11,15 +11,8 @@ class Solution(object):
         :rtype: List[Interval]
         """
         ########sort
-        for i in range(len(intervals)):
-            dic_start += [intervals[i].start]
-
-        List_Sort = []
-        for i in range(len(intervals)):
-            min_i = dic_start.index(min(dic_start))
-            List_Sort += [intervals[min_i]]
-            dic_start = dic_start[0:min_i] + dic_start[min_i+1:]
-            intervals = intervals[0:min_i] + intervals[min_i+1:]
+        intervals.sort(key=lambda i:i.start)
+        List_Sort = intervals
 
         ###########################
         while True:
