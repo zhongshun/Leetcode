@@ -8,7 +8,7 @@ def merge(intervals):
     :type intervals: List[Interval]
     :rtype: List[Interval]
     """
-    intervals.sort(key=lambda i:i.start)
+    intervals.sort(key=lambda j:j.start)
     Meged = []
     for s in intervals:
         if Meged and Meged[-1].end >= s.start:
@@ -24,5 +24,7 @@ s4 = Interval(15,18)
 s5 = Interval(4,7)
 intervals = [s1,s2,s3,s4]
 
-mege = merge(intervals)
-for i in range
+s = ['daf','et','tret0','123','dfas']
+print(s)
+s.sort(key=lambda i:i[1])
+print(s)
