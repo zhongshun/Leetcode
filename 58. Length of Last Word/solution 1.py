@@ -13,7 +13,8 @@ def lengthOfLastWord(s):
         s_list.pop()
     return res
 
-s = "Hello"
-print(lengthOfLastWord(s))
+s = " "
+word = s.split()
+print(word)
 
 
