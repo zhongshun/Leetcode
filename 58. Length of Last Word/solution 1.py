@@ -13,7 +13,7 @@ def lengthOfLastWord(s):
         s_list.pop()
     return res
 
-s = " "
+s = "aa bd ce ddda eer "
 word = s.split()
 print(word)
 
