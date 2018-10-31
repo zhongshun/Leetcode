@@ -5,22 +5,25 @@ class Solution(object):
         :type wordDict: List[str]
         :rtype: List[str]
         """
-        dp_record = {}
-        wordDict.sort(key=lambda i: len(i))
-        def dp(i):
-            if (i) not in dp_record:
-                sx = s[i:]
-                for word in wordDict:
-                    if word in sx[:len(word)]:
-                        if not sx[len(word):]:
-                            dp_record[i] = [word]
-                        else:
-                            if dp(i+len(word)):
-                                dp_record[i] = [word] + dp_record[i+len(word)]
+        return self.help(s,wordDict,{})
 
-            return dp_record[i]
+    def help(self,s,wordDict,memo):
+        if s in memo: return memo[s]
+        if not s: return []
 
-        return dp(0)
+        res = []
+        for word in wordDict:
+            if word != s[:len(word)]:
+                continue
+            if len(s) == len(word):
+                res.append(word)
+            else:
+                rest = self.help(s[len(word):],wordDict,memo)
+                for item in rest:
+                    item = word + ' ' + item
+                    res.append(item)
+        memo[s] = res
+        return res
 
 
 
