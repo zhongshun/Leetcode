@@ -24,7 +24,9 @@ class Solution(object):
             V = 0
         return V + self.trap(height[:min(H1,H2)+1]) + self.trap(height[max(H1,H2):])
 
+
 height = [5,3,4,6,6,8,4,4]
+height = [0,1,0,2,1,0,1,3,2,1,2,1]
 #height = [3, 2, 1, 2, 1]
 p = Solution()
 print(p.trap(height))
